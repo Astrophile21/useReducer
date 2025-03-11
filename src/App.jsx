@@ -3,20 +3,6 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-let initialState=0;
-
-const reducer=(count,action)=>{
-     switch(action){
-      case "Increment":
-      return count+1
-
-      case "Decrement":
-        return count-1 
-      
-        case "reset":
-          return initialState
-     }
-}
 function App() {
   const [count, dispatch] = useReducer(reducer,initialState)
 
@@ -31,7 +17,7 @@ function App() {
     <button onClick={()=>dispatch("reset")}>Reset the value</button>
 
         
-      </div>
+    </div>
     </>
   )
 }
